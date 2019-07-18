@@ -118,7 +118,7 @@ public class ObjectHelper {
 	}
 
 	/**
-	 * 是否所有对象全部为null或者说toString==“”
+	 * 是否所有对象全部为null或者说t g==“”
 	 * 
 	 * @param objects
 	 * @return
