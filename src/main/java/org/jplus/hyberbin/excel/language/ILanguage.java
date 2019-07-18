@@ -18,9 +18,10 @@ package org.jplus.hyberbin.excel.language;
 
 /**
  * 国际化工具接口
+ * 
  * @author Hyberbin
  */
 public interface ILanguage {
 
-    public String translate(Object key, Object... args);
+	public String translate(Object key, Object... args);
 }

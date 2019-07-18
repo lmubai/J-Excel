@@ -23,56 +23,58 @@ import java.util.List;
  * 循环节的配置
  */
 public abstract class GroupConfig {
-    private int groupSize;
-    private int length;
-    private List<String> fieldNames=new ArrayList<String>();
-    private int globalLength=0;
+	private int groupSize;
+	private int length;
+	private List<String> fieldNames = new ArrayList<String>();
+	private int globalLength = 0;
 
-    public GroupConfig(int groupSize, int length) {
-        this.groupSize = groupSize;
-        this.length = length;
-    }
-    public GroupConfig(int length) {
-        this.groupSize = 1;
-        this.length = length;
-    }
+	public GroupConfig(int groupSize, int length) {
+		this.groupSize = groupSize;
+		this.length = length;
+	}
 
-    public int getRealLength(){
-          return globalLength/groupSize;
-    }
+	public GroupConfig(int length) {
+		this.groupSize = 1;
+		this.length = length;
+	}
 
-    public abstract String getLangName(int innerIndex,int index);
+	public int getRealLength() {
+		return globalLength / groupSize;
+	}
 
-    public int getLength() {
-        return length;
-    }
+	public abstract String getLangName(int innerIndex, int index);
 
-    public int getGroupSize() {
-        return groupSize;
-    }
+	public int getLength() {
+		return length;
+	}
 
-    public void addField(String fieldName){
-        if(!fieldNames.contains(fieldName)){
-            this.fieldNames.add(fieldName);
-        }
-        globalLength++;
-    }
+	public int getGroupSize() {
+		return groupSize;
+	}
 
-    public List<String> getFieldNames() {
-        return fieldNames;
-    }
+	public void addField(String fieldName) {
+		if (!fieldNames.contains(fieldName)) {
+			this.fieldNames.add(fieldName);
+		}
+		globalLength++;
+	}
 
-    public void setFieldNames(List<String> fieldNames) {
-        this.fieldNames=fieldNames;
-    }
-    /**获取一个匿名的循环节配置（主要是在导入的时候用到）*/
-    public static GroupConfig getNoNameGroup(int groupSize,int length){
-        return new GroupConfig(groupSize,length) {
-            @Override
-            public String getLangName(int innerIndex, int index) {
-                return null;
-            }
-        };
-    }
+	public List<String> getFieldNames() {
+		return fieldNames;
+	}
+
+	public void setFieldNames(List<String> fieldNames) {
+		this.fieldNames = fieldNames;
+	}
+
+	/** 获取一个匿名的循环节配置（主要是在导入的时候用到） */
+	public static GroupConfig getNoNameGroup(int groupSize, int length) {
+		return new GroupConfig(groupSize, length) {
+			@Override
+			public String getLangName(int innerIndex, int index) {
+				return null;
+			}
+		};
+	}
 
 }

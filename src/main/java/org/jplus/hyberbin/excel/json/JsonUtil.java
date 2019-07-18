@@ -17,23 +17,23 @@
 package org.jplus.hyberbin.excel.json;
 
 /**
- * json工具.
- * 这里只是引用一个简单的，如果要性能更高或者项目本身有可以自己设置
+ * json工具. 这里只是引用一个简单的，如果要性能更高或者项目本身有可以自己设置
+ * 
  * @author Hyberbin
  */
 public class JsonUtil {
 
-    private static IJsonUtil jsonUtil = new SimpleJsonUtil();
+	private static IJsonUtil jsonUtil = new SimpleJsonUtil();
 
-    public static String toJSON(Object o) {
-        return jsonUtil.toJSON(o);
-    }
+	public static String toJSON(Object o) {
+		return jsonUtil.toJSON(o);
+	}
 
-    public static <T> T toObject(String s, Class type) {
-        return jsonUtil.toObject(s, type);
-    }
+	public static <T> T toObject(String s, Class type) {
+		return jsonUtil.toObject(s, type);
+	}
 
-    public static void setJsonUtil(IJsonUtil jsonUtil) {
-        JsonUtil.jsonUtil = jsonUtil;
-    }
+	public static void setJsonUtil(IJsonUtil jsonUtil) {
+		JsonUtil.jsonUtil = jsonUtil;
+	}
 }

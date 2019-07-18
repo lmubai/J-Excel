@@ -22,21 +22,22 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Hyberbin
- * Date: 13-12-3
- * Time: 下午5:42
- * To change this template use File | Settings | File Templates.
+ * Created with IntelliJ IDEA. User: Hyberbin Date: 13-12-3 Time: 下午5:42 To
+ * change this template use File | Settings | File Templates.
  */
-@Target(ElementType.FIELD)//该注解只能用在成员变量上
+@Target(ElementType.FIELD)
+// 该注解只能用在成员变量上
 @Retention(RetentionPolicy.RUNTIME)
 public @interface IntValidateConfig {
-    /**转换器执行的方法*/
-    String method() default "IntegerValidateAdapter";
-    /**最大值*/
-    String max() default Integer.MAX_VALUE+"";
-    /**最小值*/
-    String min() default Integer.MIN_VALUE+"";
-    /**输入提示*/
-    String tipLangName() default "";
+	/** 转换器执行的方法 */
+	String method() default "IntegerValidateAdapter";
+
+	/** 最大值 */
+	String max() default Integer.MAX_VALUE + "";
+
+	/** 最小值 */
+	String min() default Integer.MIN_VALUE + "";
+
+	/** 输入提示 */
+	String tipLangName() default "";
 }

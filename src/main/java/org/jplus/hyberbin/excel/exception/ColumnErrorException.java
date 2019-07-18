@@ -18,38 +18,33 @@ package org.jplus.hyberbin.excel.exception;
 
 import org.jplus.hyberbin.excel.language.LanguageUtils;
 
-
 /**
- * Created with IntelliJ IDEA.
- * User: Hyberbin
- * Date: 13-12-4
- * Time: 上午9:57
+ * Created with IntelliJ IDEA. User: Hyberbin Date: 13-12-4 Time: 上午9:57
  */
 public class ColumnErrorException extends Exception {
-    private int row, clo;
-    private String message;
+	private int row, clo;
+	private String message;
 
-    public ColumnErrorException(int row, int clo) {
-        this.row = row;
-        this.clo = clo;
-    }
+	public ColumnErrorException(int row, int clo) {
+		this.row = row;
+		this.clo = clo;
+	}
 
-    public ColumnErrorException(int row, int clo, String message) {
-        this(row, clo);
-        this.message = LanguageUtils.translate(message,row,clo);
-    }
+	public ColumnErrorException(int row, int clo, String message) {
+		this(row, clo);
+		this.message = LanguageUtils.translate(message, row, clo);
+	}
 
-    public ColumnErrorException(int row, String fieldName, String message) {
-        this.row = row;
-        this.message = LanguageUtils.translate(message,row,fieldName);
-    }
+	public ColumnErrorException(int row, String fieldName, String message) {
+		this.row = row;
+		this.message = LanguageUtils.translate(message, row, fieldName);
+	}
 
+	public void setMessage(String message) {
+		this.message = LanguageUtils.translate(message, row, clo);
+	}
 
-    public void setMessage(String message) {
-        this.message = LanguageUtils.translate(message,row,clo);
-    }
-
-    public String getMessage() {
-        return message;
-    }
+	public String getMessage() {
+		return message;
+	}
 }

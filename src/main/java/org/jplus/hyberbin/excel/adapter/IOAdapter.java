@@ -21,22 +21,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Hyberbin
- * Date: 13-12-4
- * Time: 下午2:04
+ * Created with IntelliJ IDEA. User: Hyberbin Date: 13-12-4 Time: 下午2:04
  */
 public abstract class IOAdapter {
-    protected final transient Logger log = LoggerFactory.getLogger(getClass());
-//    protected Logger log = LoggerFactory.getLogger(getClass());
-    protected DicCodePool dicCodePool;
+	protected final transient Logger log = LoggerFactory.getLogger(getClass());
+	// protected Logger log = LoggerFactory.getLogger(getClass());
+	protected DicCodePool dicCodePool;
 
-    public IOAdapter(DicCodePool dicCodePool) {
-        this.dicCodePool = dicCodePool;
-    }
+	public IOAdapter(DicCodePool dicCodePool) {
+		this.dicCodePool = dicCodePool;
+	}
 
-    public void finish() {
-        dicCodePool.clear();
-    }
+	public void finish() {
+		dicCodePool.clear();
+	}
 
 }

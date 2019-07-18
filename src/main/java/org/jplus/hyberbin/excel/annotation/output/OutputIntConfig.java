@@ -22,16 +22,15 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Hyberbin
- * Date: 13-12-3
- * Time: 下午5:25
+ * Created with IntelliJ IDEA. User: Hyberbin Date: 13-12-3 Time: 下午5:25
  */
-@Target(ElementType.FIELD)//该注解只能用在成员变量上
+@Target(ElementType.FIELD)
+// 该注解只能用在成员变量上
 @Retention(RetentionPolicy.RUNTIME)
 public @interface OutputIntConfig {
-    /**导入数据转换器执行的方法*/
-    String method() default "outputIntAdapter";
-    /**是否允许为空*/
-    boolean nullAble() default true;
+	/** 导入数据转换器执行的方法 */
+	String method() default "outputIntAdapter";
+
+	/** 是否允许为空 */
+	boolean nullAble() default true;
 }

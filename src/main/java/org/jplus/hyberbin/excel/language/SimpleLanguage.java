@@ -18,6 +18,7 @@ package org.jplus.hyberbin.excel.language;
 
 import java.lang.reflect.Field;
 import java.text.MessageFormat;
+
 import org.jplus.hyberbin.excel.annotation.Lang;
 
 /**
@@ -26,53 +27,58 @@ import org.jplus.hyberbin.excel.annotation.Lang;
  */
 public class SimpleLanguage implements ILanguage {
 
-    @Override
-    public String translate(Object key, Object... args) {
-        if (key instanceof Field) {
-            Field field = (Field) key;
-            if (field.isAnnotationPresent(Lang.class)) {
-                Lang lang = field.getAnnotation(Lang.class);
-                return lang.value();
-            }
-            return field.getName();
-        }
-        return TextFormat.format(key.toString(), args);
-    }
-    
+	@Override
+	public String translate(Object key, Object... args) {
+		if (key instanceof Field) {
+			Field field = (Field) key;
+			if (field.isAnnotationPresent(Lang.class)) {
+				Lang lang = field.getAnnotation(Lang.class);
+				return lang.value();
+			}
+			return field.getName();
+		}
+		return TextFormat.format(key.toString(), args);
+	}
 
 }
 
 class TextFormat {
 
-    /**
-     * 格式化字符串
-     * @param message 要格式化的内容
-     * @param objects 参数
-     * @return
-     */
-    public static String format(String message, Object... objects) {
-        StringBuilder builder = new StringBuilder(message);
-        return MessageFormat.format(replace(builder, objects), objects);
-    }
+	/**
+	 * 格式化字符串
+	 * 
+	 * @param message
+	 *            要格式化的内容
+	 * @param objects
+	 *            参数
+	 * @return
+	 */
+	public static String format(String message, Object... objects) {
+		StringBuilder builder = new StringBuilder(message);
+		return MessageFormat.format(replace(builder, objects), objects);
+	}
 
-    /**
-     * 将msg{},{},{}替换成msg{0},{1},{2}的形式
-     * @param message 要替换的内容
-     * @param objects 替换对象
-     * @return
-     */
-    private static String replace(StringBuilder message, Object... objects) {
-        Integer n = 0;
-        String res = message.toString();
-        for (Object object : objects) {
-            if (object instanceof Throwable) {
-                ((Throwable) object).printStackTrace();
-            } else {
-                int indexOf = message.indexOf("{}");
-                res = indexOf > 0 ? message.insert(indexOf + 1, n++).toString() : message.toString();
-            }
-        }
-        return res;
-    }
+	/**
+	 * 将msg{},{},{}替换成msg{0},{1},{2}的形式
+	 * 
+	 * @param message
+	 *            要替换的内容
+	 * @param objects
+	 *            替换对象
+	 * @return
+	 */
+	private static String replace(StringBuilder message, Object... objects) {
+		Integer n = 0;
+		String res = message.toString();
+		for (Object object : objects) {
+			if (object instanceof Throwable) {
+				((Throwable) object).printStackTrace();
+			} else {
+				int indexOf = message.indexOf("{}");
+				res = indexOf > 0 ? message.insert(indexOf + 1, n++).toString() : message.toString();
+			}
+		}
+		return res;
+	}
 
 }

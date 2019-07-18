@@ -22,21 +22,24 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * User: Hyberbin
- * Date: 13-12-3
- * Time: 下午5:27
+ * User: Hyberbin Date: 13-12-3 Time: 下午5:27
  */
-@Target(ElementType.FIELD)//该注解只能用在成员变量上
+@Target(ElementType.FIELD)
+// 该注解只能用在成员变量上
 @Retention(RetentionPolicy.RUNTIME)
 public @interface InputDicConfig {
-    /***数据字典值*/
-    String dicCode();
-    /**导入数据转换器执行的方法*/
-    String method() default "inputDicCodeAdapter";
-    /**是否允许为空*/
-    boolean nullAble() default true;
-    /**是否默认继承上一行的值*/
-    boolean defaultByUp() default false;
-    /**是否完全匹配*/
-    boolean allMatch() default true;
+	/*** 数据字典值 */
+	String dicCode();
+
+	/** 导入数据转换器执行的方法 */
+	String method() default "inputDicCodeAdapter";
+
+	/** 是否允许为空 */
+	boolean nullAble() default true;
+
+	/** 是否默认继承上一行的值 */
+	boolean defaultByUp() default false;
+
+	/** 是否完全匹配 */
+	boolean allMatch() default true;
 }

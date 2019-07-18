@@ -22,12 +22,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by Hyberbin on 14-1-21.
- * 用于记录单元格的位置
+ * Created by Hyberbin on 14-1-21. 用于记录单元格的位置
  */
-@Target(ElementType.FIELD)//该注解只能用在成员变量上
+@Target(ElementType.FIELD)
+// 该注解只能用在成员变量上
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Local {
-    int row();
-    int column();
+	int row();
+
+	int column();
 }

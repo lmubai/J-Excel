@@ -19,29 +19,26 @@ package org.jplus.hyberbin.excel.exception;
 import org.jplus.hyberbin.excel.language.LanguageUtils;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Hyberbin
- * Date: 13-12-4
- * Time: 上午9:57
+ * Created with IntelliJ IDEA. User: Hyberbin Date: 13-12-4 Time: 上午9:57
  */
 public class RowErrorException extends Exception {
-    private int row;
-    private String message;
+	private int row;
+	private String message;
 
-    public RowErrorException(int row) {
-        this.row = row;
-    }
+	public RowErrorException(int row) {
+		this.row = row;
+	}
 
-    public RowErrorException(int row, String message) {
-        this(row);
-        this.message = LanguageUtils.translate(message,row);
-    }
+	public RowErrorException(int row, String message) {
+		this(row);
+		this.message = LanguageUtils.translate(message, row);
+	}
 
-    public void setMessage(String message) {
-        this.message = LanguageUtils.translate(message,row);
-    }
+	public void setMessage(String message) {
+		this.message = LanguageUtils.translate(message, row);
+	}
 
-    public String getMessage() {
-        return message;
-    }
+	public String getMessage() {
+		return message;
+	}
 }

@@ -24,8 +24,9 @@ import java.lang.annotation.Target;
 /**
  * Created by Hyberbin on 13-12-9.
  */
-@Target(ElementType.FIELD)//该注解只能用在成员变量上
+@Target(ElementType.FIELD)
+// 该注解只能用在成员变量上
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ExcelColumnGroup {
-    Class type();
+	Class type();
 }

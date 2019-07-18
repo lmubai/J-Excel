@@ -16,27 +16,27 @@
  */
 package org.jplus.hyberbin.excel.language;
 
-
 /**
- * 语言国际化工具.
- * 用户可以自己实现国际化接口
+ * 语言国际化工具. 用户可以自己实现国际化接口
+ * 
  * @author Hyberbin
  */
 public class LanguageUtils {
 
-    private static ILanguage language = new SimpleLanguage();
+	private static ILanguage language = new SimpleLanguage();
 
-    /**
-     * @param key
-     * @param args the command line arguments
-     * @return
-     */
-    public static String translate(String key, Object... args) {
-        return language.translate(key, args);
-    }
+	/**
+	 * @param key
+	 * @param args
+	 *            the command line arguments
+	 * @return
+	 */
+	public static String translate(String key, Object... args) {
+		return language.translate(key, args);
+	}
 
-    public static void setLanguage(ILanguage lang) {
-        language = lang;
-    }
+	public static void setLanguage(ILanguage lang) {
+		language = lang;
+	}
 
 }

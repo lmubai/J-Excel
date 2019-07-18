@@ -17,14 +17,13 @@
 package org.jplus.hyberbin.excel.bean;
 
 /**
- * 字段类型
- * Created by Hyberbin on 13-12-9.
+ * 字段类型 Created by Hyberbin on 13-12-9.
  */
 public enum FieldType {
-    /**基本类型*/
-    BASIC,
-    /**基本类型的数组*/
-    BAS_ARRAY,
-    /**带循环体的数组*/
-    ColumnGroup_ARRAY
+	/** 基本类型 */
+	BASIC,
+	/** 基本类型的数组 */
+	BAS_ARRAY,
+	/** 带循环体的数组 */
+	ColumnGroup_ARRAY
 }

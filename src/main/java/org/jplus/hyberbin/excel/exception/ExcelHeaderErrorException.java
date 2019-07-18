@@ -18,20 +18,17 @@ package org.jplus.hyberbin.excel.exception;
 
 import org.jplus.hyberbin.excel.language.LanguageUtils;
 
-
 /**
- * User: Hyberbin
- * Date: 13-12-4
- * Time: 上午9:58
+ * User: Hyberbin Date: 13-12-4 Time: 上午9:58
  */
 public class ExcelHeaderErrorException extends Exception {
-    private String message;
+	private String message;
 
-    public ExcelHeaderErrorException(String message) {
-        this.message = LanguageUtils.translate(message);
-    }
+	public ExcelHeaderErrorException(String message) {
+		this.message = LanguageUtils.translate(message);
+	}
 
-    public String getMessage() {
-        return message;
-    }
+	public String getMessage() {
+		return message;
+	}
 }

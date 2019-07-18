@@ -22,20 +22,21 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Hyberbin
- * Date: 13-12-3
- * Time: 下午5:40
+ * Created with IntelliJ IDEA. User: Hyberbin Date: 13-12-3 Time: 下午5:40
  */
-@Target(ElementType.FIELD)//该注解只能用在成员变量上
+@Target(ElementType.FIELD)
+// 该注解只能用在成员变量上
 @Retention(RetentionPolicy.RUNTIME)
 public @interface DicValidateConfig {
-    /***数据字典值*/
-    String dicCode();
-    /**转换器执行的方法*/
-    String method() default "DicCodeValidateAdapter";
-    /**将码表放在哪个一列上 A到Z*/
-    char columnName() default 0;
-    /**输入提示*/
-    String tipLangName() default "";
+	/*** 数据字典值 */
+	String dicCode();
+
+	/** 转换器执行的方法 */
+	String method() default "DicCodeValidateAdapter";
+
+	/** 将码表放在哪个一列上 A到Z */
+	char columnName() default 0;
+
+	/** 输入提示 */
+	String tipLangName() default "";
 }

@@ -22,17 +22,17 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Hyberbin
- * Date: 13-12-3
- * Time: 下午5:45
+ * Created with IntelliJ IDEA. User: Hyberbin Date: 13-12-3 Time: 下午5:45
  */
-@Target(ElementType.FIELD)//该注解只能用在成员变量上
+@Target(ElementType.FIELD)
+// 该注解只能用在成员变量上
 @Retention(RetentionPolicy.RUNTIME)
 public @interface TextValidateConfig {
-    /**转换器执行的方法*/
-    String method() default "TextValidateAdapter";
-    int length();
-    /**输入提示*/
-    String tipLangName() default "";
+	/** 转换器执行的方法 */
+	String method() default "TextValidateAdapter";
+
+	int length();
+
+	/** 输入提示 */
+	String tipLangName() default "";
 }

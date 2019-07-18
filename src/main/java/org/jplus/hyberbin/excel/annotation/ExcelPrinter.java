@@ -23,13 +23,16 @@ import java.lang.annotation.Target;
 /**
  * Created by Hyberbin on 14-1-21.
  */
-@Target({java.lang.annotation.ElementType.TYPE})//该注解只能用在类上
+@Target({ java.lang.annotation.ElementType.TYPE })
+// 该注解只能用在类上
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ExcelPrinter {
-    /**模板开始行*/
-    int startRow();
-    /**模板结束行*/
-    int endRow();
-    /**一个节点后的空行*/
-    int spaceRow() default 0;
+	/** 模板开始行 */
+	int startRow();
+
+	/** 模板结束行 */
+	int endRow();
+
+	/** 一个节点后的空行 */
+	int spaceRow() default 0;
 }

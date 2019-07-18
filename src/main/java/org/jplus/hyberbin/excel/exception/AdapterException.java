@@ -20,29 +20,27 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.jplus.hyberbin.excel.language.LanguageUtils;
 
 /**
- * User: Hyberbin
- * Date: 13-12-4
- * Time: 上午10:47
+ * User: Hyberbin Date: 13-12-4 Time: 上午10:47
  */
 public class AdapterException extends Exception {
-    private String fieldName;
-    private String message;
+	private String fieldName;
+	private String message;
 
-    public AdapterException(String fieldName,String message) {
-        this.fieldName = fieldName;
-        this.message = LanguageUtils.translate(message,fieldName);
-    }
+	public AdapterException(String fieldName, String message) {
+		this.fieldName = fieldName;
+		this.message = LanguageUtils.translate(message, fieldName);
+	}
 
-    public AdapterException(String message,Cell cell) {
-        this.message = LanguageUtils.translate(message,cell.getRowIndex(),cell.getColumnIndex(),cell.toString());
-    }
+	public AdapterException(String message, Cell cell) {
+		this.message = LanguageUtils.translate(message, cell.getRowIndex(), cell.getColumnIndex(), cell.toString());
+	}
 
-    public AdapterException(String fieldName,String message,Cell cell) {
-        this.fieldName = fieldName;
-        this.message = LanguageUtils.translate(message,fieldName,cell.getRowIndex(),cell.getColumnIndex(),cell.toString());
-    }
+	public AdapterException(String fieldName, String message, Cell cell) {
+		this.fieldName = fieldName;
+		this.message = LanguageUtils.translate(message, fieldName, cell.getRowIndex(), cell.getColumnIndex(), cell.toString());
+	}
 
-    public String getMessage() {
-        return message;
-    }
+	public String getMessage() {
+		return message;
+	}
 }

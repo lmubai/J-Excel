@@ -16,63 +16,60 @@
  */
 package org.jplus.hyberbin.excel.bean;
 
-import org.apache.poi.ss.usermodel.Cell;
-
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.poi.ss.usermodel.Cell;
+
 /**
- * Created with IntelliJ IDEA.
- * User: Hyberbin
- * Date: 13-12-4
- * Time: 下午12:41
+ * Created with IntelliJ IDEA. User: Hyberbin Date: 13-12-4 Time: 下午12:41
  */
 public abstract class BaseExcelVo {
-    private int row;
-    private int col;
-    private Map<String,Cell> cellMap=new HashMap<String, Cell>();
-    private String message;
+	private int row;
+	private int col;
+	private Map<String, Cell> cellMap = new HashMap<String, Cell>();
+	private String message;
 
-    public int getCol() {
-        return col;
-    }
+	public int getCol() {
+		return col;
+	}
 
-    public void setCol(int col) {
-        this.col = col;
-    }
+	public void setCol(int col) {
+		this.col = col;
+	}
 
-    public String getMessage() {
-        return message;
-    }
+	public String getMessage() {
+		return message;
+	}
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
+	public void setMessage(String message) {
+		this.message = message;
+	}
 
-    public int getRow() {
-        return row;
-    }
+	public int getRow() {
+		return row;
+	}
 
-    public void setRow(int row) {
-        this.row = row;
-    }
+	public void setRow(int row) {
+		this.row = row;
+	}
 
-    public abstract int getHashVal();
+	public abstract int getHashVal();
 
-    public Cell getCell(String item) {
-        return cellMap.get(item);
-    }
+	public Cell getCell(String item) {
+		return cellMap.get(item);
+	}
 
-    public void setCell(String item,Cell cell) {
-        cellMap.put(item,cell);
-    }
+	public void setCell(String item, Cell cell) {
+		cellMap.put(item, cell);
+	}
 
-    /**
-     * 如果返回false将会加入到错误信息列表.
-     * 开发者根据setMessage和getRow等setter和getter方法生成错误信息
-     * @return
-     */
-    public boolean validate(){
-          return true;
-    }
+	/**
+	 * 如果返回false将会加入到错误信息列表. 开发者根据setMessage和getRow等setter和getter方法生成错误信息
+	 * 
+	 * @return
+	 */
+	public boolean validate() {
+		return true;
+	}
 }

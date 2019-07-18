@@ -22,12 +22,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Hyberbin
- * Date: 13-12-3
- * Time: 下午6:14
+ * Created with IntelliJ IDEA. User: Hyberbin Date: 13-12-3 Time: 下午6:14
  */
-@Target(ElementType.METHOD)//该注解只能用在方法上
+@Target(ElementType.METHOD)
+// 该注解只能用在方法上
 @Retention(RetentionPolicy.RUNTIME)
 public @interface DefaultAdapterMethod {
 }

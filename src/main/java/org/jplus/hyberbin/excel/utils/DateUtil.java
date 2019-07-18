@@ -21,25 +21,23 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * User: Hyberbin
- * Date: 13-12-3
- * Time: 上午9:24
+ * User: Hyberbin Date: 13-12-3 Time: 上午9:24
  */
 public class DateUtil {
 
-    public static String format(Date date, String format) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
-        return simpleDateFormat.format(date);
-    }
+	public static String format(Date date, String format) {
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
+		return simpleDateFormat.format(date);
+	}
 
-    public static String format(String date, String oldFormat, String newFormat) throws ParseException {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(oldFormat);
-        Date parse = simpleDateFormat.parse(date);
-        return format(parse, newFormat);
-    }
+	public static String format(String date, String oldFormat, String newFormat) throws ParseException {
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(oldFormat);
+		Date parse = simpleDateFormat.parse(date);
+		return format(parse, newFormat);
+	}
 
-    public static Date formatToDate(String date, String format) throws ParseException {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
-        return simpleDateFormat.parse(date);
-    }
+	public static Date formatToDate(String date, String format) throws ParseException {
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
+		return simpleDateFormat.parse(date);
+	}
 }

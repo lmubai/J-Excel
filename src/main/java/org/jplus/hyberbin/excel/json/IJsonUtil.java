@@ -22,7 +22,7 @@ package org.jplus.hyberbin.excel.json;
  */
 public interface IJsonUtil {
 
-    public String toJSON(Object o);
+	public String toJSON(Object o);
 
-    public <T> T toObject(String s, Class type);
+	public <T> T toObject(String s, Class type);
 }

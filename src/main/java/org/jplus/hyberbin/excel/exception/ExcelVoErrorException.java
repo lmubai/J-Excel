@@ -18,30 +18,27 @@ package org.jplus.hyberbin.excel.exception;
 
 import org.jplus.hyberbin.excel.language.LanguageUtils;
 
-
 /**
- * Created with IntelliJ IDEA.
- * User: Hyberbin
- * Date: 13-12-4
- * Time: 上午9:57
+ * Created with IntelliJ IDEA. User: Hyberbin Date: 13-12-4 Time: 上午9:57
  */
 public class ExcelVoErrorException extends Exception {
-    private Class excelVo;
-    private String message;
+	private Class excelVo;
+	private String message;
 
-    public ExcelVoErrorException(Class excelVo){
-        this.excelVo=excelVo;
-    }
-    public ExcelVoErrorException(Class excelVo,String message){
-        this(excelVo);
-        this.message = LanguageUtils.translate(message,excelVo.getName());
-    }
+	public ExcelVoErrorException(Class excelVo) {
+		this.excelVo = excelVo;
+	}
 
-    public void setMessage(String message) {
-        this.message = LanguageUtils.translate(message,excelVo.getName());
-    }
+	public ExcelVoErrorException(Class excelVo, String message) {
+		this(excelVo);
+		this.message = LanguageUtils.translate(message, excelVo.getName());
+	}
 
-    public String getMessage() {
-        return message;
-    }
+	public void setMessage(String message) {
+		this.message = LanguageUtils.translate(message, excelVo.getName());
+	}
+
+	public String getMessage() {
+		return message;
+	}
 }

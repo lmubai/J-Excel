@@ -24,19 +24,25 @@ import java.lang.annotation.Target;
 /**
  * Created by Hyberbin on 2014/6/19.
  */
-@Target(ElementType.FIELD)//该注解只能用在成员变量上
+@Target(ElementType.FIELD)
+// 该注解只能用在成员变量上
 @Retention(RetentionPolicy.RUNTIME)
 public @interface InputTextConfig {
-    /**导入数据转换器执行的方法*/
-    String method() default "inputTextAdapter";
-    /**是否允许为空*/
-    boolean nullAble() default true;
-    /**是否默认继承上一行的值*/
-    boolean defaultByUp() default false;
-    /**最大长度*/
-    int maxLength() default 0;
-    /**最小长度*/
-    int minLength() default 0;
-    /**正则表达式*/
-    String regx() default "";
+	/** 导入数据转换器执行的方法 */
+	String method() default "inputTextAdapter";
+
+	/** 是否允许为空 */
+	boolean nullAble() default true;
+
+	/** 是否默认继承上一行的值 */
+	boolean defaultByUp() default false;
+
+	/** 最大长度 */
+	int maxLength() default 0;
+
+	/** 最小长度 */
+	int minLength() default 0;
+
+	/** 正则表达式 */
+	String regx() default "";
 }

@@ -20,37 +20,34 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Hyberbin
- * Date: 13-12-3
- * Time: 下午6:59
+ * Created with IntelliJ IDEA. User: Hyberbin Date: 13-12-3 Time: 下午6:59
  */
 public final class AdapterConstant {
 
-    public final static Set<String> inputConfigs=new HashSet<String>(0);
-    public final static Set<String> outputConfigs=new HashSet<String>(0);
-    public final static Set<String> validateConfigs=new HashSet<String>(0);
+	public final static Set<String> inputConfigs = new HashSet<String>(0);
+	public final static Set<String> outputConfigs = new HashSet<String>(0);
+	public final static Set<String> validateConfigs = new HashSet<String>(0);
 
-    public static void ini(){
-        inputConfigs.add("InputTextConfig");
-        inputConfigs.add("InputDateConfig");
-        inputConfigs.add("InputDefaultConfig");
-        inputConfigs.add("InputDicConfig");
-        inputConfigs.add("InputIntConfig");
-        outputConfigs.add("OutputDateConfig");
-        outputConfigs.add("OutputDefaultConfig");
-        outputConfigs.add("OutputDicConfig");
-        outputConfigs.add("OutputIntConfig");
-        outputConfigs.add("OutputNumericConfig");
-        validateConfigs.add("DateValidateConfig");
-        validateConfigs.add("DicValidateConfig");
-        validateConfigs.add("IntValidateConfig");
-        validateConfigs.add("NumericValidateConfig");
-        validateConfigs.add("TextValidateConfig");
-        validateConfigs.add("HiddenValidateConfig");
-    }
+	public static void ini() {
+		inputConfigs.add("InputTextConfig");
+		inputConfigs.add("InputDateConfig");
+		inputConfigs.add("InputDefaultConfig");
+		inputConfigs.add("InputDicConfig");
+		inputConfigs.add("InputIntConfig");
+		outputConfigs.add("OutputDateConfig");
+		outputConfigs.add("OutputDefaultConfig");
+		outputConfigs.add("OutputDicConfig");
+		outputConfigs.add("OutputIntConfig");
+		outputConfigs.add("OutputNumericConfig");
+		validateConfigs.add("DateValidateConfig");
+		validateConfigs.add("DicValidateConfig");
+		validateConfigs.add("IntValidateConfig");
+		validateConfigs.add("NumericValidateConfig");
+		validateConfigs.add("TextValidateConfig");
+		validateConfigs.add("HiddenValidateConfig");
+	}
 
-    static {
-        ini();
-    }
+	static {
+		ini();
+	}
 }

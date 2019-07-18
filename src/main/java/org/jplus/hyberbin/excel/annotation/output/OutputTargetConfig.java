@@ -24,7 +24,8 @@ import java.lang.annotation.Target;
 /**
  * Created by Hyberbin on 14-1-22.
  */
-@Target(ElementType.FIELD)//该注解只能用在成员变量上
+@Target(ElementType.FIELD)
+// 该注解只能用在成员变量上
 @Retention(RetentionPolicy.RUNTIME)
 public @interface OutputTargetConfig {
 }

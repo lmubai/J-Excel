@@ -20,40 +20,40 @@ package org.jplus.hyberbin.excel.bean;
  * Created by Hyberbin on 14-1-22.
  */
 public class TookPairs {
-    private String sourceField;
-    private String distField;
-    private String value;
+	private String sourceField;
+	private String distField;
+	private String value;
 
-    public TookPairs() {
-    }
+	public TookPairs() {
+	}
 
-    public TookPairs(String sourceField, String distField, String value) {
-        this.sourceField = sourceField;
-        this.distField = distField;
-        this.value = value;
-    }
+	public TookPairs(String sourceField, String distField, String value) {
+		this.sourceField = sourceField;
+		this.distField = distField;
+		this.value = value;
+	}
 
-    public String getSourceField() {
-        return sourceField;
-    }
+	public String getSourceField() {
+		return sourceField;
+	}
 
-    public void setSourceField(String sourceField) {
-        this.sourceField = sourceField;
-    }
+	public void setSourceField(String sourceField) {
+		this.sourceField = sourceField;
+	}
 
-    public String getDistField() {
-        return distField;
-    }
+	public String getDistField() {
+		return distField;
+	}
 
-    public void setDistField(String distField) {
-        this.distField = distField;
-    }
+	public void setDistField(String distField) {
+		this.distField = distField;
+	}
 
-    public String getValue() {
-        return value;
-    }
+	public String getValue() {
+		return value;
+	}
 
-    public void setValue(String value) {
-        this.value = value;
-    }
+	public void setValue(String value) {
+		this.value = value;
+	}
 }

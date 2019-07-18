@@ -23,5 +23,5 @@ import org.apache.poi.ss.usermodel.Cell;
  * @author hyberbin
  */
 public interface LoadCellHandler {
-    Object readCell(Cell cell) ;
+	Object readCell(Cell cell);
 }

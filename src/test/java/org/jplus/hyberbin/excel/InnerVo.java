@@ -24,51 +24,49 @@ import org.jplus.hyberbin.excel.bean.BaseExcelVo;
  *
  * @author Hyberbin
  */
-@ExcelVoConfig//Excel导出的配置
-public class InnerVo  extends BaseExcelVo {
-    @OutputTargetConfig
-    private String hiddenvalue;
-    private String key;
-    private String value;
+@ExcelVoConfig
+// Excel导出的配置
+public class InnerVo extends BaseExcelVo {
+	@OutputTargetConfig
+	private String hiddenvalue;
+	private String key;
+	private String value;
 
-    public InnerVo() {
-    }
+	public InnerVo() {
+	}
 
-    public InnerVo(String key, String value) {
-        this.key = key;
-        this.value = value;
-    }
+	public InnerVo(String key, String value) {
+		this.key = key;
+		this.value = value;
+	}
 
-    
+	public String getKey() {
+		return key;
+	}
 
-    public String getKey() {
-        return key;
-    }
+	public void setKey(String key) {
+		this.key = key;
+	}
 
-    public void setKey(String key) {
-        this.key = key;
-    }
+	public String getValue() {
+		return value;
+	}
 
-    public String getValue() {
-        return value;
-    }
+	public void setValue(String value) {
+		this.value = value;
+	}
 
-    public void setValue(String value) {
-        this.value = value;
-    }
+	public String getHiddenvalue() {
+		return hiddenvalue;
+	}
 
-    public String getHiddenvalue() {
-        return hiddenvalue;
-    }
+	public void setHiddenvalue(String hiddenvalue) {
+		this.hiddenvalue = hiddenvalue;
+	}
 
-    public void setHiddenvalue(String hiddenvalue) {
-        this.hiddenvalue = hiddenvalue;
-    }
+	@Override
+	public int getHashVal() {
+		return 0;
+	}
 
-    @Override
-    public int getHashVal() {
-        return 0;
-    }
-
-    
 }
